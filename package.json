@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "An Interactive Discord Bot for pbta games, using slash commands to trigger moves.",
   "main": "index.js",
+  "type": "module",
   "private": true,
   "scripts": {
     "start": "node index.js",
@@ -40,10 +41,20 @@
       "standard"
     ],
     "root": true,
+    "rules": {
+      "comma-dangle": [
+        "warn",
+        "always-multiline"
+      ]
+    },
     "env": {
       "es6": true,
       "node": true,
       "mocha": true
     }
+  },
+  "dependencies": {
+    "debug": "^4.3.1",
+    "discord.js": "^12.5.3"
   }
 }
