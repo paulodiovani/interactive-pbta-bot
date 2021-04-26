@@ -1,0 +1,60 @@
+{
+  "name": "interactive-pbta-bot",
+  "version": "0.1.0",
+  "description": "An Interactive Discord Bot for pbta games, using slash commands to trigger moves.",
+  "main": "index.js",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node index.js",
+    "development": "nodemon -r dotenv/config index.js",
+    "lint": "eslint **/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulodiovani/interactive-pbta-bot.git"
+  },
+  "keywords": [
+    "rpg",
+    "pbta",
+    "discord",
+    "bot"
+  ],
+  "author": "Paulo Diovani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paulodiovani/interactive-pbta-bot/issues"
+  },
+  "homepage": "https://github.com/paulodiovani/interactive-pbta-bot#readme",
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "eslint": "^7.25.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "nodemon": "^2.0.7"
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard"
+    ],
+    "root": true,
+    "rules": {
+      "comma-dangle": [
+        "warn",
+        "always-multiline"
+      ]
+    },
+    "env": {
+      "es6": true,
+      "node": true,
+      "mocha": true
+    }
+  },
+  "dependencies": {
+    "debug": "^4.3.1",
+    "discord.js": "^12.5.3"
+  }
+}
