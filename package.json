@@ -1,0 +1,26 @@
+{
+  "name": "interactive-pbta-bot",
+  "version": "0.1.0",
+  "description": "An Interactive Discord Bot for pbta games, using slash commands to trigger moves.",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulodiovani/interactive-pbta-bot.git"
+  },
+  "keywords": [
+    "rpg",
+    "pbta",
+    "discord",
+    "bot"
+  ],
+  "author": "Paulo Diovani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paulodiovani/interactive-pbta-bot/issues"
+  },
+  "homepage": "https://github.com/paulodiovani/interactive-pbta-bot#readme"
+}
