@@ -1,8 +1,8 @@
 import path from 'path'
 import { debug } from './lib/logger.js'
 import { fileURLToPath } from 'url'
-import { getApp, login, onReady } from './lib/discord-client.js'
-import { getCommands, registerCommands } from './lib/commands.js'
+import { getApi, getApp, login, onInteraction, onReady } from './lib/discord-client.js'
+import { getCommands, registerCommands, registerInteractions } from './lib/commands.js'
 
 login(process.env.TOKEN)
 
@@ -12,9 +12,15 @@ onReady(async () => {
   debug('Using locale file at', localeFile)
 
   const app = () => getApp(process.env.GUILD)
+  const api = getApi()
 
-  registerCommands(app, localeFile)
+  // register new commands
+  await registerCommands(app, localeFile)
 
+  // list commands in debug mode
   const commands = await getCommands(app)
-  debug('Registered commands: ', commands)
+  debug('Registered commands: ', JSON.stringify(commands, null, 2))
+
+  // register interactions
+  await registerInteractions(api, onInteraction, localeFile)
 })
