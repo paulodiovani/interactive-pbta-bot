@@ -12,15 +12,12 @@ application:
     description: Resultado
   total:
     description: Total
-
 commands:
   - name: Movimento
     description: Executa um movimento
-
 categories:
   - name: basico
     description: Movimentos básicos
-
 moves:
   - name: agir-sob-pressao
     description: Agir Sob Pressão
@@ -30,7 +27,6 @@ moves:
       success_with_complications: |
         Você vacila, hesita ou enrola: o MC pode te oferecer um resultado pior, uma barganha difícil ou uma escolha terrível.
       failure: Prepare-se para o pior.
-
   - name: partir-para-cima
     description: Partir para cima
     category: basico
@@ -40,7 +36,9 @@ moves:
           - Pagar pra ver e aguentar as consequências.
           - Ceder e fazer o que você quiser.
       success_with_complications: |
-        Ela pode escolher 1 dos acima, ou 1 dos abaixo:
+        A pessoa tem que escolher 1:
+          - Pagar pra ver e aguentar as consequências.
+          - Ceder e fazer o que você quiser.
           - Sair da sua frente.
           - Se trancar em algum lugar seguro.
           - Te dar algo que ela acha que você quer, ou lhe dizer algo que você quer ouvir.
