@@ -1,0 +1,38 @@
+---
+application:
+  dice:
+    description: Dice
+  attribute:
+    name: attribute
+    description: Attribute
+  modifier:
+    name: modifier
+    description: Modifier (+/-)
+  result:
+    description: Result
+  total:
+    description: Total
+commands:
+  - name: move
+    description: Performs a move
+categories:
+  - name: basic
+    description: Basic movements
+moves:
+  - name: do-something-under-fire
+    description: Do Something Under Fire
+    category: basic
+    results:
+      complete_success: You do it.
+      success_with_complications: |
+        You flinch, hesitate, or stall: the MC can offer you a worse outcome, a hard bargain, or an ugly choice.
+      failure: Be prepared for the worst.
+  - name: go-aggro-on-someone
+    description: Go Aggro on Someone
+    category: basic
+    results:
+      complete_success: |
+        They have to choose: force your hand, or cave and do what you want. If they force your hand, you can do what you threatened, including inflicting harm as established.
+      success_with_complications: |
+        They can choose to force your hand or to cave, but they can also choose instead to fight back or make a break for it, and now you’re doing battle with them. If they force your hand, you can do what you threatened, including inflicting harm as established.
+      failure: Be prepared for the worst.
