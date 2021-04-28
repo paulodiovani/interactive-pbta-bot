@@ -1,7 +1,7 @@
 import path from 'path'
 import { debug, info } from './lib/logger.js'
 import { fileURLToPath } from 'url'
-import { getClient, getApp as _getApp } from './lib/discord-client.js'
+import { getClient, getApp as _getApp } from './lib/client.js'
 import { getCommands, registerCommands, deletelCommand } from './lib/commands.js'
 import { waitForInteractions } from './lib/interactions.js'
 import { loadLocales } from './lib/locales.js'
