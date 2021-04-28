@@ -26,14 +26,14 @@ describe('commands', () => {
 
   describe('.getCommands', () => {
     it('gets existing commands', async () => {
-      await getCommands(getAppStub)
+      await getCommands({ getApp: getAppStub })
       expect(appMock.commands.get).to.have.been.calledOnce
     })
   })
 
   describe('.registerCommands', () => {
     it('register new commands', async () => {
-      await registerCommands(getAppStub, localesMock)
+      await registerCommands(localesMock, { getApp: getAppStub })
       expect(appMock.commands.put).to.have.been.calledWith({
         data: [
           {
@@ -74,7 +74,7 @@ describe('commands', () => {
   describe('.deleteCommand', () => {
     it('deletes an existing command', async () => {
       const command = { id: 123, name: 'sample-command' }
-      await deleteCommand(getAppStub, command)
+      await deleteCommand(command, { getApp: getAppStub })
       expect(appMock.commands).to.have.been.calledWith(123)
       expect(appMock.commands.delete).to.have.been.calledOnce
     })
