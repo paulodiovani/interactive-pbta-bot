@@ -8,7 +8,8 @@
   "scripts": {
     "start": "node index.js",
     "development": "nodemon -r dotenv/config index.js",
-    "lint": "eslint **/*.js",
+    "eslint": "eslint .",
+    "yamllint": "yamllint **/*.yml",
     "test": "mocha -r test/test-helper.js test/**/*.test.js",
     "test-debug": "mocha -r test/test-helper.js inspect test/**/*.test.js"
   },
