@@ -6,12 +6,12 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "start": "node index.js",
-    "development": "nodemon -r dotenv/config index.js",
     "eslint": "eslint .",
-    "yamllint": "yamllint **/*.yml",
+    "local": "nodemon -r dotenv/config index.js",
+    "start": "node index.js",
     "test": "mocha -r test/test-helper.js test/**/*.test.js",
-    "test-debug": "mocha -r test/test-helper.js inspect test/**/*.test.js"
+    "test-debug": "mocha -r test/test-helper.js inspect test/**/*.test.js",
+    "yamllint": "yamllint **/*.yml"
   },
   "repository": {
     "type": "git",
