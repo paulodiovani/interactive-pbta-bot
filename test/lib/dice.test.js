@@ -11,9 +11,9 @@ describe('lib/dice.js', () => {
     }
 
     context('when dice is 2d10', () => {
-      // repeat some times to test with different values
-      repeat(25, () => {
-        it('returns an array of two integers within 1 and 10', () => {
+      it('returns an array of two integers within 1 and 10', () => {
+        // repeat some times to test with different values
+        repeat(25, () => {
           const result = roll(DICE_2D10)
           expect(result).to.be.an('array')
           expect(result[0])
@@ -29,9 +29,9 @@ describe('lib/dice.js', () => {
     })
 
     context('when dice is 2d6', () => {
-      // repeat some times to test with different values
-      repeat(25, () => {
-        it('returns an array of two integers within 1 and 6', () => {
+      it('returns an array of two integers within 1 and 6', () => {
+        // repeat some times to test with different values
+        repeat(25, () => {
           const result = roll(DICE_2D6)
           expect(result).to.be.an('array')
           expect(result[0])
