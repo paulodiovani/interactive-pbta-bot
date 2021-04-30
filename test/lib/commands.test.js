@@ -3,7 +3,7 @@ import { expect } from 'chai'
 import localesMock from '../support/fixtures/locale-mock.js'
 import { getCommands, registerCommands, deleteCommand } from '../../lib/commands.js'
 
-describe('commands', () => {
+describe('lib/commands.js', () => {
   let appMock
   let getAppStub
 
