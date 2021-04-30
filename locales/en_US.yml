@@ -1,6 +1,7 @@
 ---
 application:
   dice:
+    name: dice
     description: Dice
   attribute:
     name: attribute
@@ -9,8 +10,10 @@ application:
     name: modifier
     description: Modifier (+/-)
   result:
+    name: result
     description: Result
   total:
+    name: total
     description: Total
 commands:
   - name: move
