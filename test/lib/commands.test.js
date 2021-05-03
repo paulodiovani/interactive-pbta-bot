@@ -1,6 +1,6 @@
 import sinon from 'sinon'
 import { expect } from 'chai'
-import localesMock from '../support/fixtures/locale-mock.js'
+import localesMock from '../support/fixtures/locales-mock.js'
 import { getCommands, registerCommands, deleteCommand } from '../../lib/commands.js'
 
 describe('lib/commands.js', () => {
