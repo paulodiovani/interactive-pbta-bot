@@ -10,7 +10,7 @@ describe('lib/bot.js', () => {
 
     const config = {
       DICE: 'sample-dice',
-      EMBED_COLOR: 'sample-color',
+      COLOR: 'sample-color',
       GUILD: 'sample-guild-id',
       LOCALE_FILE: '/sample/locale/file',
       TOKEN: 'sample-token',
@@ -50,7 +50,7 @@ describe('lib/bot.js', () => {
         expect(dependenciesMock.getCommands).to.have.been.calledWith({ getApp: sinon.match.func })
         expect(dependenciesMock.deleteCommand).to.not.have.been.called
         expect(dependenciesMock.registerCommands).to.have.been.calledWith(localesMock, { getApp: sinon.match.func })
-        expect(dependenciesMock.waitForInteractions).to.have.been.calledWith(localesMock, config.DICE, config.EMBED_COLOR)
+        expect(dependenciesMock.waitForInteractions).to.have.been.calledWith(localesMock, config.DICE, config.COLOR)
       })
     })
 

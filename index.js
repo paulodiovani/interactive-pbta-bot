@@ -12,7 +12,7 @@ const config = {
   ...process.env,
   LOCALE,
   LOCALE_FILE: localeFile,
-  EMBED_COLOR: process.env.EMBED_COLOR || '#000',
+  COLOR: process.env.COLOR || '#000',
   GUILD: process.env.GUILD,
   TOKEN: process.env.TOKEN,
   DICE: process.env.DICE || DICE_2D6,
