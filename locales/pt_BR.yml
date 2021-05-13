@@ -16,7 +16,7 @@ application:
     name: total
     description: Total
 commands:
-  - name: Movimento
+  - name: movimento
     description: Executa um movimento
 categories:
   - name: basico
