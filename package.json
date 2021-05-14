@@ -6,10 +6,12 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "eslint": "eslint .",
+    "local": "nodemon -r dotenv/config index.js",
     "start": "node index.js",
-    "development": "nodemon -r dotenv/config index.js",
-    "lint": "eslint **/*.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -r test/test-helper.js test/**/*.test.js",
+    "test-debug": "mocha -r test/test-helper.js inspect test/**/*.test.js",
+    "yamllint": "yamllint **/*.yml"
   },
   "repository": {
     "type": "git",
@@ -27,14 +29,23 @@
     "url": "https://github.com/paulodiovani/interactive-pbta-bot/issues"
   },
   "homepage": "https://github.com/paulodiovani/interactive-pbta-bot#readme",
+  "dependencies": {
+    "debug": "^4.3.1",
+    "discord.js": "^12.5.3",
+    "yaml": "^1.10.2"
+  },
   "devDependencies": {
+    "chai": "^4.3.4",
     "dotenv": "^8.2.0",
     "eslint": "^7.25.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
-    "nodemon": "^2.0.7"
+    "mocha": "^8.3.2",
+    "nodemon": "^2.0.7",
+    "sinon": "^10.0.0",
+    "sinon-chai": "^3.6.0"
   },
   "eslintConfig": {
     "extends": [
@@ -47,14 +58,22 @@
         "always-multiline"
       ]
     },
+    "overrides": [
+      {
+        "files": [
+          "test/**/*.test.js"
+        ],
+        "rules": {
+          "no-unused-expressions": [
+            "off"
+          ]
+        }
+      }
+    ],
     "env": {
       "es6": true,
       "node": true,
       "mocha": true
     }
-  },
-  "dependencies": {
-    "debug": "^4.3.1",
-    "discord.js": "^12.5.3"
   }
 }

@@ -1,6 +1,7 @@
 ---
 application:
   dice:
+    name: dados
     description: Dados
   attribute:
     name: atributo
@@ -9,11 +10,13 @@ application:
     name: modificador
     description: Modificador (+/-)
   result:
+    name: resultado
     description: Resultado
   total:
+    name: total
     description: Total
 commands:
-  - name: Movimento
+  - name: movimento
     description: Executa um movimento
 categories:
   - name: basico
