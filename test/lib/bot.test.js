@@ -45,19 +45,19 @@ describe('lib/bot.js', () => {
     context('when client starts', () => {
       it('register commands, lists them, and wait for interactions', async () => {
         await start(config, dependenciesMock)
-        await Promise.resolve() // defer until all promises resolves
+        await new Promise((resolve) => setTimeout(resolve, 0)) // defer until all promises resolves
 
         expect(dependenciesMock.getCommands).to.have.been.calledWith({ getApp: sinon.match.func })
         expect(dependenciesMock.deleteCommand).to.not.have.been.called
         expect(dependenciesMock.registerCommands).to.have.been.calledWith(localesMock, { getApp: sinon.match.func })
-        expect(dependenciesMock.waitForInteractions).to.have.been.calledWith(localesMock, config.DICE, config.COLOR)
+        expect(dependenciesMock.waitForInteractions).to.have.been.calledWith(localesMock, config)
       })
     })
 
     context('when client starts and it is set to delete commands', () => {
       it('register commands, lists them, and wait for interactions', async () => {
         await start({ ...config, DELETE_COMMANDS: true }, dependenciesMock)
-        await Promise.resolve() // defer until all promises resolve
+        await new Promise((resolve) => setTimeout(resolve, 0)) // defer until all promises resolves
 
         expect(dependenciesMock.deleteCommand).to.have.been.calledWith({ id: 'sample-command-id' }, { getApp: sinon.match.func })
       })

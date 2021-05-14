@@ -4,9 +4,21 @@ const localesMock = {
       name: 'attribute',
       description: 'Attr Description',
     },
+    dice: {
+      name: 'dice',
+      description: 'Dice Description',
+    },
     modifier: {
       name: 'modifier',
       description: 'Mod Description',
+    },
+    result: {
+      name: 'result',
+      description: 'Res Description',
+    },
+    total: {
+      name: 'total',
+      description: 'Tot Description',
     },
   },
   commands: [
@@ -26,6 +38,11 @@ const localesMock = {
       name: 'sample-move',
       description: 'sample-move-description',
       category: 'sample-category',
+      results: {
+        complete_success: 'sample-success',
+        success_with_complications: 'sample-succes-with-complication',
+        failure: 'sample-failure',
+      },
     },
   ],
 }
