@@ -16,10 +16,11 @@ application:
     name: total
     description: Total
 commands:
-  - name: move
+  - name: aw
     description: Performs a move
 categories:
   - name: basic
+    command: aw
     description: Basic movements
 moves:
   - name: do-something-under-fire
@@ -30,6 +31,25 @@ moves:
       success_with_complications: |
         You flinch, hesitate, or stall: the MC can offer you a worse outcome, a hard bargain, or an ugly choice.
       failure: Be prepared for the worst.
+
+  - name: attack-someone
+    description: Attack Someone
+    category: basic
+    results:
+      complete_success: Inflict full harm as established.
+      success_with_complications: >
+        They're able somehow to dodge, block, or duck, or else you just don't quite strike home; inflict little harm.
+        In either case, if they can and do choose to fight back, now you’re doing battle with them.
+      failure: Be prepared for the worst.
+
+  - name: do-battle
+    description: Do Battle
+    category: basic
+    results:
+      complete_success: You succeed.
+      success_with_complications: You succeed at a cost.
+      failure: Be prepared for the worst.
+
   - name: go-aggro-on-someone
     description: Go Aggro on Someone
     category: basic
@@ -39,3 +59,95 @@ moves:
       success_with_complications: |
         They can choose to force your hand or to cave, but they can also choose instead to fight back or make a break for it, and now you’re doing battle with them. If they force your hand, you can do what you threatened, including inflicting harm as established.
       failure: Be prepared for the worst.
+
+  - name: seduce-or-manipulate
+    description: Seduce or Manipulate
+    category: basic
+    results:
+      complete_success: |
+        For NPCs: They ask you to promise something first, and do it if you promise.
+          Whether you keep your promise is up to you, later
+        For PCs: Choose both.
+          - if they do it, they mark experience
+          - if they refuse, erase one of their stat highlights for the remainder of the session
+      success_with_complications: |
+        For NPCs: They ask you to promise something first, and do it if you promise.
+          They need some concrete assurance right now.
+        For PCs: Choose 1:
+          - if they do it, they mark experience
+          - if they refuse, erase one of their stat highlights for the remainder of the session
+      failure: Be prepared for the worst.
+
+  - name: help-or-interfere
+    description: Help or Interfere
+    category: basic
+    results:
+      complete_success: They take +2 (help) or -2 (interfere) on their roll.
+      success_with_complications: They take +1 (help) or -1 (interfere) on their roll.
+      failure: Be prepared for the worst.
+
+  - name: read-a-sitch
+    description: Read a Sitch
+    category: basic
+    results:
+      complete_success: |
+        Whenever you act on one of the MC's answers, take a +1.
+        Ask 3:
+          - where's my best escape route / way in / way past?
+          - which enemy is most vulnerable to me?
+          - which enemy is the biggest threat?
+          - what should I be on the lookout for?
+          - what's my enemy's true position?
+          - who's in control here?
+      success_with_complications: |
+        Whenever you act on one of the MC's answers, take a +1.
+        Ask 1:
+          - where's my best escape route / way in / way past?
+          - which enemy is most vulnerable to me?
+          - which enemy is the biggest threat?
+          - what should I be on the lookout for?
+          - what's my enemy's true position?
+          - who's in control here?
+      failure: |
+        Ask 1 anyway, but be prepared for the worst:
+          - where's my best escape route / way in / way past?
+          - which enemy is most vulnerable to me?
+          - which enemy is the biggest threat?
+          - what should I be on the lookout for?
+          - what's my enemy's true position?
+          - who's in control here?
+
+  - name: read-a-person
+    description: Read a Person
+    category: basic
+    results:
+      complete_success: |
+        Hold 3.
+        While you're interacting with them, spend your hold to ask their player questions, 1 for 1:
+          - is your character telling the truth?
+          - what's your character really feeling?
+          - what does your character intend to do?
+          - what does your character wish I'd do?
+          - how could I get your character to __?
+      success_with_complications: |
+        Hold 1.
+        While you're interacting with them, spend your hold to ask their player questions, 1 for 1:
+          - is your character telling the truth?
+          - what's your character really feeling?
+          - what does your character intend to do?
+          - what does your character wish I'd do?
+          - how could I get your character to __?
+      failure: Be prepared for the worst.
+
+  - name: open-your-brain
+    description: Open Your Brain
+    category: basic
+    results:
+      complete_success: |
+        The MC will tell you something new and interesting about the current situation, and might ask you a question or two; answer them.
+        MC will give you good detail.
+      success_with_complications: |
+        The MC will tell you something new and interesting about the current situation, and might ask you a question or two; answer them.
+        MC will give you an impression. If you already know all there is to know, the MC will tell you that.
+      failure: Be prepared for the worst.
+
