@@ -16,11 +16,11 @@ application:
     name: total
     description: Total
 commands:
-  - name: move
+  - name: aw
     description: Performs a move
 categories:
   - name: basic
-    command: move
+    command: aw
     description: Basic movements
 moves:
   - name: do-something-under-fire
