@@ -20,6 +20,7 @@ commands:
     description: Performs a move
 categories:
   - name: basic
+    command: move
     description: Basic movements
 moves:
   - name: do-something-under-fire

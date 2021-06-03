@@ -20,6 +20,7 @@ commands:
     description: Executa um movimento
 categories:
   - name: basico
+    command: movimento
     description: Movimentos básicos
 moves:
   - name: agir-sob-pressao
