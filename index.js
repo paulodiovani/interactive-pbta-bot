@@ -3,15 +3,14 @@ import { fileURLToPath } from 'url'
 import { DICE_2D6 } from './lib/constants.js'
 import * as Bot from './lib/bot.js'
 
-const { LOCALE = 'en_US' } = process.env
+const { MOVELIST = 'moves/apocalypse-world.en-us.yml' } = process.env
 
 const dirname = path.dirname(fileURLToPath(import.meta.url))
-const localeFile = path.join(dirname, 'locales', LOCALE + '.yml')
+const movesFile = path.join(dirname, MOVELIST)
 
 const config = {
   ...process.env,
-  LOCALE,
-  LOCALE_FILE: localeFile,
+  MOVES_FILE: movesFile,
   COLOR: process.env.COLOR || '#000',
   GUILD: process.env.GUILD,
   TOKEN: process.env.TOKEN,

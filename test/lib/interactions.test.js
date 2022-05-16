@@ -1,4 +1,4 @@
-import localesMock from '../support/fixtures/locales-mock.js'
+import movesMock from '../support/fixtures/moves-mock.js'
 import sinon from 'sinon'
 import { APIMessage } from 'discord.js'
 import { CHANNEL_MESSAGE_WITH_SOURCE, DICE_2D6 } from '../../lib/constants.js'
@@ -32,7 +32,7 @@ describe('lib/interactions.js', () => {
     })
 
     it('waits for INTERACTION_CREATE ws event', () => {
-      waitForInteractions(localesMock, configMock, { getClient: getClientStub })
+      waitForInteractions(movesMock, configMock, { getClient: getClientStub })
       expect(getClientStub).to.have.been.calledOnce
       expect(clientMock.ws.on).to.have.been.calledWith('INTERACTION_CREATE', sinon.match.func)
     })
@@ -69,7 +69,7 @@ describe('lib/interactions.js', () => {
       })
 
       it('posts interaction callback', async () => {
-        await waitForInteractions(localesMock, configMock, { getClient: getClientStub })
+        await waitForInteractions(movesMock, configMock, { getClient: getClientStub })
         expect(getClientStub).to.have.been.calledTwice
         expect(clientMock.channels.resolve).to.have.been.calledWith('sample-channel-id')
 

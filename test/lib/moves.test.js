@@ -2,72 +2,72 @@ import { readdir } from 'fs/promises'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { expect } from 'chai'
-import { loadLocales } from '../../lib/locales.js'
+import { loadMoves } from '../../lib/moves.js'
 
-describe('lib/locales.js', () => {
-  const getLocaleFiles = async () => {
+describe('lib/moves.js', () => {
+  const getMovesFiles = async () => {
     const dirname = path.dirname(fileURLToPath(import.meta.url))
-    const localesPath = path.join(dirname, '..', '..', 'locales')
-    const localeFiles = await readdir(localesPath)
+    const movesPath = path.join(dirname, '..', '..', 'moves')
+    const files = await readdir(movesPath)
 
-    return localeFiles.map((file) => path.join(localesPath, file))
+    return files.map((file) => path.join(movesPath, file))
   }
 
-  describe('.loadLocales', () => {
+  describe('.loadMoves', () => {
     it('throws error when provided inexistent path', async () => {
       try {
-        await loadLocales('/tmp/invalid-path')
+        await loadMoves('/tmp/invalid-path')
       } catch (e) {
-        expect(e.message).to.eq('Failed to load locales.')
+        expect(e.message).to.eq('Failed to load move list.')
       }
     })
 
     it('returns an object with expected commands and translations', async () => {
-      const localeFiles = await getLocaleFiles()
+      const files = await getMovesFiles()
 
-      for (const localeFile of localeFiles) {
+      for (const movesFile of files) {
         try {
-          const locales = await loadLocales(localeFile)
+          const moveList = await loadMoves(movesFile)
 
-          expect(locales)
+          expect(moveList)
             .to.be.an('object')
             .that.include.all.keys('application', 'commands', 'categories', 'moves')
 
-          expect(locales.application)
+          expect(moveList.application)
             .to.be.an('object')
             .that.include.all.keys('attribute', 'dice', 'modifier', 'result', 'total')
 
-          for (const key in locales.application) {
-            expect(locales.application[key])
+          for (const key in moveList.application) {
+            expect(moveList.application[key])
               .to.be.an('object')
               .that.include.all.keys('name', 'description')
           }
 
-          for (const command of locales.commands) {
+          for (const command of moveList.commands) {
             expect(command)
               .to.be.an('object')
               .that.include.all.keys('name', 'description')
           }
 
-          for (const category of locales.categories) {
+          for (const category of moveList.categories) {
             expect(category)
               .to.be.an('object')
               .that.include.all.keys('name', 'description')
           }
 
-          for (const move of locales.moves) {
+          for (const move of moveList.moves) {
             expect(move)
               .to.be.an('object')
               .that.include.all.keys('name', 'description', 'category', 'results')
 
-            expect(locales.categories.map((cat) => cat.name)).to.include(move.category)
+            expect(moveList.categories.map((cat) => cat.name)).to.include(move.category)
 
             expect(move.results)
               .to.be.an('object')
               .that.include.all.keys('complete_success', 'success_with_complications', 'failure')
           }
         } catch (e) {
-          throw new Error(`${e.message} in ${path.basename(localeFile)}`)
+          throw new Error(`${e.message} in ${path.basename(movesFile)}`)
         }
       }
     })
