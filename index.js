@@ -16,7 +16,7 @@ const config = {
   GUILD: process.env.GUILD,
   TOKEN: process.env.TOKEN,
   DICE: process.env.DICE || DICE_2D6,
-  DELETE_COMMANDS: process.env.DELETE_COMMANDS || false,
+  DELETE_COMMANDS: process.env.DELETE_COMMANDS === 'true',
 }
 
 Bot.start(config)
