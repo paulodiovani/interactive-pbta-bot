@@ -1,4 +1,4 @@
-const localesMock = {
+const movesMock = {
   application: {
     attribute: {
       name: 'attribute',
@@ -30,6 +30,7 @@ const localesMock = {
   categories: [
     {
       name: 'sample-category',
+      command: 'sample-command',
       description: 'sample-category-description',
     },
   ],
@@ -47,4 +48,4 @@ const localesMock = {
   ],
 }
 
-export default localesMock
+export default movesMock

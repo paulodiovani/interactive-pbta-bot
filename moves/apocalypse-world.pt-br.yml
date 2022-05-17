@@ -15,13 +15,16 @@ application:
   total:
     name: total
     description: Total
+
 commands:
-  - name: aw
+  - name: movimento
     description: Executa um movimento
+
 categories:
   - name: basico
-    command: aw
+    command: movimento
     description: Movimentos básicos
+
 moves:
   - name: agir-sob-pressao
     description: Agir Sob Pressão

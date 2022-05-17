@@ -1,6 +1,6 @@
 import sinon from 'sinon'
 import { expect } from 'chai'
-import localesMock from '../support/fixtures/locales-mock.js'
+import movesMock from '../support/fixtures/moves-mock.js'
 import { getCommands, registerCommands, deleteCommand } from '../../lib/commands.js'
 
 describe('lib/commands.js', () => {
@@ -33,7 +33,7 @@ describe('lib/commands.js', () => {
 
   describe('.registerCommands', () => {
     it('register new commands', async () => {
-      await registerCommands(localesMock, { getApp: getAppStub })
+      await registerCommands(movesMock, { getApp: getAppStub })
       expect(appMock.commands.put).to.have.been.calledWith({
         data: [
           {

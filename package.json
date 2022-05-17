@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "eslint": "eslint .",
-    "local": "nodemon -r dotenv/config index.js",
+    "dev": "nodemon -r dotenv/config index.js",
     "start": "node index.js",
     "test": "mocha -r test/test-helper.js test/**/*.test.js",
     "test-debug": "mocha -r test/test-helper.js inspect test/**/*.test.js",

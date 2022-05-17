@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import sinon from 'sinon'
 import { start } from '../../lib/bot.js'
-import localesMock from '../support/fixtures/locales-mock.js'
+import movesMock from '../support/fixtures/moves-mock.js'
 
 describe('lib/bot.js', () => {
   describe('.start', () => {
@@ -12,7 +12,7 @@ describe('lib/bot.js', () => {
       DICE: 'sample-dice',
       COLOR: 'sample-color',
       GUILD: 'sample-guild-id',
-      LOCALE_FILE: '/sample/locale/file',
+      MOVES_FILE: '/sample/moves/file',
       TOKEN: 'sample-token',
     }
 
@@ -25,7 +25,7 @@ describe('lib/bot.js', () => {
       dependenciesMock = {
         getApp: sinon.stub(),
         getClient: sinon.stub().returns(clientMock),
-        loadLocales: sinon.stub().resolves(localesMock),
+        loadMoves: sinon.stub().resolves(movesMock),
         getCommands: sinon.stub().resolves([{ id: 'sample-command-id' }]),
         registerCommands: sinon.stub().resolves(),
         deleteCommand: sinon.stub().resolves(),
@@ -36,7 +36,7 @@ describe('lib/bot.js', () => {
     it('gets the client and login', async () => {
       await start(config, dependenciesMock)
 
-      expect(dependenciesMock.loadLocales).to.have.been.calledWith(config.LOCALE_FILE)
+      expect(dependenciesMock.loadMoves).to.have.been.calledWith(config.MOVES_FILE)
       expect(dependenciesMock.getClient).to.have.been.calledOnce
       expect(clientMock.on).to.have.been.calledWith('ready', sinon.match.func)
       expect(clientMock.login).to.have.been.calledWith(config.TOKEN)
@@ -49,8 +49,8 @@ describe('lib/bot.js', () => {
 
         expect(dependenciesMock.getCommands).to.have.been.calledWith({ getApp: sinon.match.func })
         expect(dependenciesMock.deleteCommand).to.not.have.been.called
-        expect(dependenciesMock.registerCommands).to.have.been.calledWith(localesMock, { getApp: sinon.match.func })
-        expect(dependenciesMock.waitForInteractions).to.have.been.calledWith(localesMock, config)
+        expect(dependenciesMock.registerCommands).to.have.been.calledWith(movesMock, { getApp: sinon.match.func })
+        expect(dependenciesMock.waitForInteractions).to.have.been.calledWith(movesMock, config)
       })
     })
 

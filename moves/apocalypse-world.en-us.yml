@@ -15,13 +15,16 @@ application:
   total:
     name: total
     description: Total
+
 commands:
-  - name: aw
+  - name: move
     description: Performs a move
+
 categories:
   - name: basic
-    command: aw
+    command: move
     description: Basic movements
+
 moves:
   - name: do-something-under-fire
     description: Do Something Under Fire
