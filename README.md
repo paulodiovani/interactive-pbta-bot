@@ -1,5 +1,6 @@
 [![tests](https://github.com/paulodiovani/interactive-pbta-bot/actions/workflows/test.yml/badge.svg?branch=main)][tests-action]
 [![linters](https://github.com/paulodiovani/interactive-pbta-bot/actions/workflows/linters.yml/badge.svg?branch=main)][linters-action]
+[![Deploy to heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 [tests-action]: https://github.com/paulodiovani/interactive-pbta-bot/actions/workflows/test.yml
 [linters-action]: https://github.com/paulodiovani/interactive-pbta-bot/actions/workflows/linters.yml

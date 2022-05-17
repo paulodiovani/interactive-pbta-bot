@@ -1,0 +1,40 @@
+{
+  "name": "Interactive PbtA Bot",
+  "description": "A Discord bot with Slash commands for Powered by the Apocalypse roleplaying games",
+  "repository": "https://github.com/paulodiovani/interactive-pbta-bot",
+  "keywords": ["node", "discord", "rpg", "bot"],
+  "env": {
+    "TOKEN": {
+      "description": "Discord Bot Token",
+      "required": true
+    },
+    "MOVELIST": {
+      "description": "Moves list and locale strings file",
+      "required": true,
+      "value": "./moves/apocalypse-world.en-us.yml"
+    },
+    "COLOR": {
+      "description": "Outline color on Discord results",
+      "required": true,
+      "value": "#000"
+    },
+    "DICE": {
+      "description": "Dice roll to use (one of 2d6 or 2d10, default 2d6)",
+      "required": true,
+      "value": "2d6"
+    },
+    "DELETE_COMMANDS": {
+      "description": "Delete old commands (true, false), use if you want to replace all existing commands",
+      "required": false
+    },
+    "GUILD": {
+      "description": "Guild Id, for development, only",
+      "required": false
+    },
+    "DEBUG": {
+      "description": "Messages to log in console",
+      "required": false,
+      "value": "pbta-bot:*,-pbta-bot:debug"
+    }
+  }
+}
