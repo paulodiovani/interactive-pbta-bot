@@ -1,7 +1,8 @@
-import path from 'path'
-import { fileURLToPath } from 'url'
-import { DICE_2D6 } from './lib/constants.js'
 import * as Bot from './lib/bot.js'
+import path from 'path'
+import { DICE_2D6 } from './lib/constants.js'
+import { error } from './lib/logger.js'
+import { fileURLToPath } from 'url'
 
 const { MOVELIST = 'moves/apocalypse-world.en-us.yml' } = process.env
 
@@ -18,4 +19,12 @@ const config = {
   DELETE_COMMANDS: process.env.DELETE_COMMANDS === 'true',
 }
 
-Bot.start(config)
+const start = async () => {
+  try {
+    await Bot.start(config)
+  } catch (e) {
+    error(e)
+    process.exit(1)
+  }
+}
+start()
