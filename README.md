@@ -13,10 +13,17 @@ An Interactive Discord Bot for pbta games, using slash commands to trigger moves
 - Install the bot into your Discord server from [one of the links below](#supported-games-languages-and-existing-bots), or
 - [Deploy and create your own bot](#deploy-and-create-a-bot)
 
-### Commands
+### Move commands
 
 The bot use slash commands available with `/move` (default command).
+
+You can also search for commands by typing any word matching the command name. Check the example below.
 
 ![usage sample](./media/usage-sample.gif)
 
 ## Supported games, languages and existing bots
+
+| Game                | Language  | Discord bots
+| --                  | --        | --
+| Apocalypse World    | en-US     |
+|                     | pt-BR     |
