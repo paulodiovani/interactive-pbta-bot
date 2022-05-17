@@ -45,7 +45,7 @@ TODO
 
 ## Supported games, languages and existing bots
 
-| Game                | Language  | Discord bots
-| --                  | --        | --
-| Apocalypse World    | en-US     |
-|                     | pt-BR     |
+| Game                | Language  | Status/Content  | Discord bots
+| --                  | --        | --              |
+| Apocalypse World    | en-US     | Basic moves     |
+|                     | pt-BR     | Basic moves     |
