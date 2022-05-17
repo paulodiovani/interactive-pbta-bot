@@ -30,6 +30,7 @@ const movesMock = {
   categories: [
     {
       name: 'sample-category',
+      command: 'sample-command',
       description: 'sample-category-description',
     },
   ],
