@@ -26,8 +26,10 @@ You can also search for commands by typing any word matching the command name. C
 ### Local development
 
 1. Create a Discord App through the [Discord Developer Portal](https://discord.com/developers/applications)
-2. Click on **Bot** on the left panel and copy the **TOKEN** from your Bot
-3. Click on OAuth2 and then on URL Generator on the left panel and select **Bot** and **Use Slash Commands**
+2. Click on **Bot** on the left panel, add a new Bot and copy its **TOKEN**
+3. Click on OAuth2 and then on URL Generator on the left panel and select
+    + Scopes: **bot**, **application.commands**
+    + Bot Permissions: **Use Slash Commands**
 4. Follow the URL to add to your server
 5. Copy `.env.sample` to `.env` and fill the `TOKEN`
 6. Set the `MOVELIST` path to the YAML file with the moves and translations.
@@ -64,7 +66,7 @@ We recommend [heroku](https://heroku.com), but you can deploy anywhere you like.
 
 | Game                | Language  | Status/Content  | Discord bots
 | --                  | --        | --              | --
-| Apocalypse World    | en-US     | Basic moves     |
+| Apocalypse World    | en-US     | Basic moves     | https://discord.com/api/oauth2/authorize?client_id=976286129517121586&permissions=2147483648&scope=bot%20applications.commands
 |                     | pt-BR     | Basic moves     |
 
 [heroku-deploy]: https://heroku.com/deploy?template=https://github.com/paulodiovani/interactive-pbta-bot
