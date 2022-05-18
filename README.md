@@ -54,10 +54,10 @@ to more languages.
 You can create your own bot and deploy to a server of your preference.
 We recommend [heroku](https://heroku.com), but you can deploy anywhere you like.
 
-[![Deploy to heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy to heroku](https://www.herokucdn.com/deploy/button.svg)][heroku-deploy]
 
 1. Follow steps `1` to `4` from [Local development](#local-development)
-2. [Deploy to heroku](https://heroku.com/deploy) or your preferred server
+2. [Deploy to heroku][heroku-deploy] or your preferred server
 3. Fill the `TOKEN` and `MOVELIST` env vars and set the others according to your preferences
 
 ## Supported games and languages
@@ -67,3 +67,4 @@ We recommend [heroku](https://heroku.com), but you can deploy anywhere you like.
 | Apocalypse World    | en-US     | Basic moves     |
 |                     | pt-BR     | Basic moves     |
 
+[heroku-deploy]: https://heroku.com/deploy?template=https://github.com/paulodiovani/interactive-pbta-bot
