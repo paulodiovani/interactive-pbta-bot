@@ -67,7 +67,7 @@ We recommend [heroku](https://heroku.com), but you can deploy anywhere you like.
 | Game                | Language  | Status/Content  | Discord bots
 | --                  | --        | --              | --
 | Apocalypse World    | en-US     | Basic moves     | [Add Apocalypse World bot][apocalypse-world-bot]
-|                     | pt-BR     | Basic moves     |
+|                     | pt-BR     | In progress     |
 
 <!-- Links -->
 [heroku-deploy]: https://heroku.com/deploy?template=https://github.com/paulodiovani/interactive-pbta-bot
