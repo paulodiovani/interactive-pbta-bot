@@ -8,6 +8,14 @@
 
 An Interactive Discord Bot for pbta games, using slash commands to trigger moves.
 
+1. [Usage](#usage)
+	1. [Move commands](#move-commands)
+2. [Contributing](#contributing)
+	1. [Local development](#local-development)
+	2. [Add games or translations](#add-games-or-translations)
+3. [Deploy and create a bot](#deploy-and-create-a-bot)
+4. [Supported games and languages](#supported-games-and-languages)
+
 ## Usage
 
 - Install the bot into your Discord server from [one of the links below](#supported-games-and-languages), or
@@ -49,7 +57,7 @@ to more languages.
 2. Create a new file with the format `game-name.locale.yml`
 3. Edit the YAML file with the contents for the new game moves, or new language texts
     + You can use a translation app, we recommend https://poeditor.com
-4. (optional) Open a Pull Request to include the new file
+4. [Open a Pull Request][collaborating-with-pull-requests] to include the new file
 
 ## Deploy and create a bot
 
@@ -72,3 +80,4 @@ We recommend [heroku](https://heroku.com), but you can deploy anywhere you like.
 <!-- Links -->
 [heroku-deploy]: https://heroku.com/deploy?template=https://github.com/paulodiovani/interactive-pbta-bot
 [apocalypse-world-bot]: https://discord.com/api/oauth2/authorize?client_id=976286129517121586&permissions=2147483648&scope=bot%20applications.commands
+[collaborating-with-pull-requests]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests
