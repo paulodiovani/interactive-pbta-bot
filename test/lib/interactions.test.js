@@ -6,7 +6,6 @@ import { expect } from 'chai'
 import { waitForInteractions } from '../../lib/interactions.js'
 
 const configMock = {
-  COLOR: 'sample-color',
   DICE: DICE_2D6,
 }
 

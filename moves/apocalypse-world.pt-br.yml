@@ -15,16 +15,13 @@ application:
   total:
     name: total
     description: Total
-
 commands:
   - name: movimento
     description: Executa um movimento
-
 categories:
   - name: basico
     command: movimento
     description: Movimentos básicos
-
 moves:
   - name: agir-sob-pressao
     description: Agir Sob Pressão
@@ -34,8 +31,25 @@ moves:
       success_with_complications: |
         Você vacila, hesita ou enrola: o MC pode te oferecer um resultado pior, uma barganha difícil ou uma escolha terrível.
       failure: Prepare-se para o pior.
+  - name: pegar-de-surpresa
+    description: Pegar de Surpresa
+    category: basico
+    results:
+      complete_success: |
+        Você simplesmente inflige ferimentos de acordo com a situação.
+      success_with_complications: |
+        A pessoa consegue evitar ou bloquear o ataque de alguma forma ou você simplesmente não acertou como planejado; causa menos dano.
+        De qualquer forma, se a pessoa pode ou decide revidar, agora você está batalhando com ela.
+      failure: Prepare-se para o pior.
+  - name: batalhar
+    description: Batalhar
+    category: basico
+    results:
+      complete_success: Você tem sucesso.
+      success_with_complications: Você tem sucesso a um custo.
+      failure: Prepare-se para o pior.
   - name: partir-para-cima
-    description: Partir para cima
+    description: Partir para Cima
     category: basico
     results:
       complete_success: |
@@ -50,4 +64,88 @@ moves:
           - Se trancar em algum lugar seguro.
           - Te dar algo que ela acha que você quer, ou lhe dizer algo que você quer ouvir.
           - Se afastar calmamente, com as mãos onde você possa vê-las.
+      failure: Prepare-se para o pior.
+  - name: seduzir-ou-manipular
+    description: Seduzir ou Manipular
+    category: basico
+    results:
+      complete_success: |
+        No caso de PNJs: o alvo vai seguir suas palavras até que (ou a não ser que) algum fato ou ação contrarie o motivo que você deu para ele.
+        No caso de PJs: ambos:
+         - Se o alvo seguir suas palavras, ele marca experiência.
+         - Se ele se negar, apague o destaque de um de seus atributos até o final da sessão.
+      success_with_complications: |
+        No caso de PNJs: o alvo vai seguir suas palavras, mas só se você conseguir dar a ele alguma garantia, corroboração ou provas antes.
+        No caso de PJs: escolha 1:
+         - Se o alvo seguir suas palavras, ele marca experiência.
+         - Se ele se negar, apague o destaque de um de seus atributos até o final da sessão.
+      failure: Prepare-se para o pior.
+  - name: ajudar-ou-interferir
+    description: Ajudar ou Interferir
+    category: basico
+    results:
+      complete_success: A pessoa recebe +2 (ajuda) ou -2 (interferência) em sua rolagem.
+      success_with_complications: A pessoa recebe +1 (ajuda) ou -1 (interferência) em sua rolagem.
+      failure: Prepare-se para o pior.
+  - name: sacar-uma-situacao
+    description: Sacar uma situação
+    category: basico
+    results:
+      complete_success: |
+        Sempre que agir de acordo com as respostas, receba +1.
+        Faça 3 perguntas:
+         - Onde fica a melhor rota de fuga / jeito de entrar / jeito de passar?
+         - Qual adversário é o mais vulnerável a mim?
+         - Qual adversário é a maior ameaça?
+         - Com o que deveria me preocupar mais?
+         - Qual é a localização exata do meu adversário?
+         - Quem está no controle aqui?
+      success_with_complications: |
+        Sempre que agir de acordo com as respostas, receba +1.
+        Faça 1 pergunta:
+         - Onde fica a melhor rota de fuga / jeito de entrar / jeito de passar?
+         - Qual adversário é o mais vulnerável a mim?
+         - Qual adversário é a maior ameaça?
+         - Com o que deveria me preocupar mais?
+         - Qual é a localização exata do meu adversário?
+         - Quem está no controle aqui?
+      failure: |
+        Faça 1 pergunta de qualquer forma, mas prepare-se para o pior.:
+         - Onde fica a melhor rota de fuga / jeito de entrar / jeito de passar?
+         - Qual adversário é o mais vulnerável a mim?
+         - Qual adversário é a maior ameaça?
+         - Com o que deveria me preocupar mais?
+         - Qual é a localização exata do meu adversário?
+         - Quem está no controle aqui?
+  - name: sacar-uma-pessoa
+    description: Sacar uma Pessoa
+    category: basico
+    results:
+      complete_success: |
+        Domínio 3.
+        Enquanto estiver interagindo com aquela personagem, você pode gastar seu domínio para fazer perguntas ao seu jogador, na razão de 1 para 1:
+        - Sua personagem está falando a verdade?
+         - O que sua personagem está realmente sentindo?
+         - O que sua personagem pretende fazer?
+         - O que sua personagem deseja que eu faça?
+         - Como conseguiria convencer sua personagem a ___?
+      success_with_complications: |
+        Domínio 1.
+        Enquanto estiver interagindo com aquela personagem, você pode gastar seu domínio para fazer perguntas ao seu jogador, na razão de 1 para 1:
+        - Sua personagem está falando a verdade?
+         - O que sua personagem está realmente sentindo?
+         - O que sua personagem pretende fazer?
+         - O que sua personagem deseja que eu faça?
+         - Como conseguiria convencer sua personagem a ___?
+      failure: "Faça uma pergunda, mas prepare-se para o pior.\nEnquanto estiver interagindo com aquela personagem, você pode gastar seu domínio para fazer perguntas ao seu jogador, na razão de 1 para 1:\n- Sua personagem está falando a verdade?\n - O que sua personagem está realmente sentindo?\n - O que sua personagem pretende fazer?\n - O que sua personagem deseja que eu faça?\n - Como conseguiria convencer sua personagem a ___?"
+  - name: abrir-sua-mente
+    description: Abrir Sua Mente para a Tempestade Psíquica que Assola o Mundo
+    category: basico
+    results:
+      complete_success: |
+        O MC vai lhe dizer algo novo e interessante a respeito da situação atual e talvez lhe faça uma pergunta ou duas. Responda-as.
+        O MC vai lhe dar muitos detalhes.
+      success_with_complications: |
+        O MC vai lhe dizer algo novo e interessante a respeito da situação atual e talvez lhe faça uma pergunta ou duas. Responda-as.
+        O MC vai lhe dar apenas algumas impressões. Se você já sabe tudo o que há para saber, o MC vai lhe afirmar isso.
       failure: Prepare-se para o pior.

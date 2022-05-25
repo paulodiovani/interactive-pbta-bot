@@ -13,11 +13,6 @@
       "required": true,
       "value": "./moves/apocalypse-world.en-us.yml"
     },
-    "COLOR": {
-      "description": "Outline color on Discord results",
-      "required": true,
-      "value": "#000"
-    },
     "DICE": {
       "description": "Dice roll to use (one of 2d6 or 2d10, default 2d6)",
       "required": true,
