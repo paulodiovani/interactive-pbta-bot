@@ -10,7 +10,6 @@ describe('lib/bot.js', () => {
 
     const config = {
       DICE: 'sample-dice',
-      COLOR: 'sample-color',
       GUILD: 'sample-guild-id',
       MOVES_FILE: '/sample/moves/file',
       TOKEN: 'sample-token',
