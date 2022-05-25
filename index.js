@@ -12,7 +12,6 @@ const movesFile = path.join(dirname, MOVELIST)
 const config = {
   ...process.env,
   MOVES_FILE: movesFile,
-  COLOR: process.env.COLOR || '#000',
   GUILD: process.env.GUILD,
   TOKEN: process.env.TOKEN,
   DICE: process.env.DICE || DICE_2D6,
