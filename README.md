@@ -74,10 +74,11 @@ We recommend [heroku](https://heroku.com), but you can deploy anywhere you like.
 
 | Game                | Language  | Status/Content  | Discord bots
 | --                  | --        | --              | --
-| Apocalypse World    | en-US     | Basic moves     | [Add Apocalypse World bot][apocalypse-world-bot]
-| Apocalypse World    | pt-BR     | Basic moves     |
+| Apocalypse World    | en-US     | Basic moves     | [Add Apocalypse World Bot][apocalypse-world-bot]
+| Apocalypse World    | pt-BR     | Basic moves     | [Adicionar Bot do Apocalypse World em pt-BR][apocalypse-world-bot-ptbr]
 
 <!-- Links -->
 [heroku-deploy]: https://heroku.com/deploy?template=https://github.com/paulodiovani/interactive-pbta-bot
 [apocalypse-world-bot]: https://discord.com/api/oauth2/authorize?client_id=976286129517121586&permissions=2147483648&scope=bot%20applications.commands
+[apocalypse-world-bot-ptbr]: https://discord.com/api/oauth2/authorize?client_id=979104765797597244&permissions=2147483648&scope=bot%20applications.commands
 [collaborating-with-pull-requests]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests
