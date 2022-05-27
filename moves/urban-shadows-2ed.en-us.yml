@@ -21,10 +21,13 @@ commands:
 categories:
   - name: generic
     command: move
-    description: Generic moves
+    description: Generic Moves
   - name: basic
     command: move
-    description: Basic moves
+    description: Basic Moves
+  - name: circle
+    command: move
+    description: Circle Moves
 moves:
   - name: roll
     description: Roll the Dice
@@ -151,10 +154,34 @@ moves:
       complete_success: Give them a +1 or -2 to their roll.
       success_with_complications: Give them a +1 or -2 to their roll but you expose yourself to danger, entanglement, or cost.
       failure: A miss. The MC tells you what happens.
+  - name: put-a-name-to-a-face
+    description: Put a Name to a Face or Vice Versa (their Circle)
+    category: circle
+    results:
+      complete_success: You know their reputation; the MC will tell you what most people know about them. You’ve dealt with them before; learn something interesting and useful about them or they owe you a Debt, your choice.
+      success_with_complications: You know their reputation; the MC will tell you what most people know about them.
+      failure: You don’t know them or you owe them, MC’s choice.
+  - name: hit-the-streets
+    description: Hit the Streets to Get What You Need (their Circle)
+    category: circle
+    results:
+      complete_success: They’re available and have the stuff.
+      success_with_complications: |
+        Choose 1:
+        - whoever you’re going to is juggling their own problems
+        - whatever you need is more costly than anticipated
+      failure: A miss. The MC tells you what happens.
+  - name: study-a-place-of-power
+    description: Study a Sanctuary, Gathering Spot, or Place of Power (the Circle that controls it)
+    category: circle
+    results:
+      complete_success: You see below the surface to the reality underneath; the MC will reveal an area, NPC, or item located within that is not what it seems. Your insight reveals much about the Circle’s politics and schemes; ask the MC a question about the Circle and take +1 forward when acting on the answer.
+      success_with_complications: You see below the surface to the reality underneath; the MC will reveal an area, NPC, or item located within that is not what it seems.
+      failure: A miss. The MC tells you what happens.
 
   # - name:
   #   description:
-  #   category: basic
+  #   category: circle
   #   results:
   #     complete_success:
   #     success_with_complications:
