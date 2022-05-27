@@ -28,6 +28,9 @@ categories:
   - name: circle
     command: move
     description: Circle Moves
+  - name: debt
+    command: move
+    description: Debt Moves
 moves:
   - name: roll
     description: Roll the Dice
@@ -181,7 +184,7 @@ moves:
 
   # - name:
   #   description:
-  #   category: circle
+  #   category: debt
   #   results:
   #     complete_success:
   #     success_with_complications:
