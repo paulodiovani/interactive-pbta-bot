@@ -1,0 +1,42 @@
+---
+application:
+  dice:
+    name: dice
+    description: Dice
+  attribute:
+    name: attribute
+    description: Attribute
+  modifier:
+    name: modifier
+    description: Modifier (+/-)
+  result:
+    name: result
+    description: Result
+  total:
+    name: total
+    description: Total
+commands:
+  - name: move
+    description: Performs a move
+categories:
+  - name: generic
+    command: move
+    description: Generic moves
+  - name: basic
+    command: move
+    description: Basic moves
+moves:
+  - name: roll
+    description: Roll the dice
+    category: generic
+    results:
+      complete_success: A full hit! You mostly get your way.
+      success_with_complications: A partial hit with costs or consequences.
+      failure: A miss. The MC tells you what happens.
+  - name: make-a-move
+    description: Make a move
+    category: generic
+    results:
+      complete_success: A full hit! You mostly get your way.
+      success_with_complications: A partial hit with costs or consequences.
+      failure: A miss. The MC tells you what happens.
