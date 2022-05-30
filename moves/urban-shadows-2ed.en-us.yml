@@ -76,7 +76,7 @@ moves:
         - you leave something important behind
         - you owe an NPC a Debt for their aid
         - you give into your base nature and mark corruption
-      success_with_complications:
+      success_with_complications: |
         You get away and choose 1, the MC choose 1 as well:
         - you suffer harm during your escape
         - you end up in another dangerous situation
