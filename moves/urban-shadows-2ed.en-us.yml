@@ -1,0 +1,199 @@
+---
+application:
+  dice:
+    name: dice
+    description: Dice
+  attribute:
+    name: attribute
+    description: Attribute
+  modifier:
+    name: modifier
+    description: Modifier (+/-)
+  result:
+    name: result
+    description: Result
+  total:
+    name: total
+    description: Total
+commands:
+  - name: move
+    description: Performs a move
+categories:
+  - name: generic
+    command: move
+    description: Generic Moves
+  - name: basic
+    command: move
+    description: Basic Moves
+  - name: circle
+    command: move
+    description: Circle Moves
+  - name: debt
+    command: move
+    description: Debt Moves
+moves:
+  - name: roll
+    description: Roll the Dice
+    category: generic
+    results:
+      complete_success: A full hit! You mostly get your way.
+      success_with_complications: A partial hit with costs or consequences.
+      failure: A miss. The MC tells you what happens.
+  - name: make-a-move
+    description: Make a Move
+    category: generic
+    results:
+      complete_success: A full hit! You mostly get your way.
+      success_with_complications: A partial hit with costs or consequences.
+      failure: A miss. The MC tells you what happens.
+  - name: turn-to-violence
+    description: Turn to Violence (Blood)
+    category: basic
+    results:
+      complete_success: |
+        You inflict harm as established and your opposition chooses 1:
+        - they inflict harm on you
+        - they put you in a bad spot
+        - they create an opening to flee
+        You also choose one:
+        - you inflict terrible harm (+1)
+        - you take something from them
+        - you create an opportunity for an ally
+      success_with_complications: |
+        You inflict harm as established and your opposition chooses 1:
+        - they inflict harm on you
+        - they put you in a bad spot
+        - they create an opening to flee
+      failure: A miss. The MC tells you what happens.
+  - name: escape-a-situation
+    description: Escape a Situation (Blood)
+    category: basic
+    results:
+      complete_success: |
+        You get away and choose 1:
+        - you suffer harm during your escape
+        - you end up in another dangerous situation
+        - you leave something important behind
+        - you owe an NPC a Debt for their aid
+        - you give into your base nature and mark corruption
+      success_with_complications:
+        You get away and choose 1, the MC choose 1 as well:
+        - you suffer harm during your escape
+        - you end up in another dangerous situation
+        - you leave something important behind
+        - you owe an NPC a Debt for their aid
+        - you give into your base nature and mark corruption
+      failure: A miss. The MC tells you what happens.
+  - name: persuade-an-npc
+    description: Persuade an NPC (Heart)
+    category: basic
+    results:
+      complete_success: They see your point and do as you ask. If you cash in a Debt with the NPC before you roll, add +3 to your total.
+      success_with_complications: They counter your offer or demand payment—a Debt, a favor, resources—before agreeing to follow through. If you cash in a Debt with the NPC before you roll, add +3 to your total.
+      failure: A miss. The MC tells you what happens.
+  - name: figure-someone-out
+    description: Figure Somone Out (Mind)
+    category: basic
+    results:
+      complete_success: |
+        Ask 2. If you’re in their Circle, ask an additional question:
+        - who’s pulling your character’s strings?
+        - what’s your character’s beef with █████?
+        - what’s your character hoping to get from █████?
+        - what does your character worry is going to happen?
+        - how could I get your character to █████?
+        - how could I put your character in my Debt?
+      success_with_complications: |
+        Ask 2, they ask 1 of you as well. If you’re in their Circle, ask an additional question:
+        - who’s pulling your character’s strings?
+        - what’s your character’s beef with █████?
+        - what’s your character hoping to get from █████?
+        - what does your character worry is going to happen?
+        - how could I get your character to █████?
+        - how could I put your character in my Debt?
+      failure: |
+        A miss. The MC tells you what happens. If you’re in their Circle, ask 1 anyway:
+        - who’s pulling your character’s strings?
+        - what’s your character’s beef with █████?
+        - what’s your character hoping to get from █████?
+        - what does your character worry is going to happen?
+        - how could I get your character to █████?
+        - how could I put your character in my Debt?
+  - name: mislead-distract-or-trick
+    description: Mislead, Distract or Trick (Mind)
+    category: basic
+    results:
+      complete_success: |
+        They are fooled, at least for a moment. Pick 3:
+        - you create an opportunity
+        - you expose a weakness or flaw
+        - you confuse them for some time
+        - you avoid further entanglement
+      success_with_complications: |
+        They are fooled, at least for a moment. Pick 2:
+        - you create an opportunity
+        - you expose a weakness or flaw
+        - you confuse them for some time
+        - you avoid further entanglement
+      failure: A miss. The MC tells you what happens.
+  - name: keep-your-cool
+    description: Keep Your Cool (Spirit)
+    category: basic
+    results:
+      complete_success: All's well.
+      success_with_complications: The MC will tell you what it’s gonna cost you.
+      failure: A miss. The MC tells you what happens.
+  - name: let-it-out
+    description:  Let Our the Power Within You (Spirit)
+    category: basic
+    results:
+      complete_success: On a hit, mark corruption and activate the ability; the MC will tell you how the effect is costly, limited, or unstable. Ignore the corruption or the complications.
+      success_with_complications: On a hit, mark corruption and activate the ability; the MC will tell you how the effect is costly, limited, or unstable.
+      failure: A miss. The MC tells you what happens.
+  - name: lend-a-hand-or-get-in-the-way
+    description: Lend a Hand or Get in the Way (their Circle)
+    category: basic
+    results:
+      complete_success: Give them a +1 or -2 to their roll.
+      success_with_complications: Give them a +1 or -2 to their roll but you expose yourself to danger, entanglement, or cost.
+      failure: A miss. The MC tells you what happens.
+  - name: put-a-name-to-a-face
+    description: Put a Name to a Face or Vice Versa (their Circle)
+    category: circle
+    results:
+      complete_success: You know their reputation; the MC will tell you what most people know about them. You’ve dealt with them before; learn something interesting and useful about them or they owe you a Debt, your choice.
+      success_with_complications: You know their reputation; the MC will tell you what most people know about them.
+      failure: You don’t know them or you owe them, MC’s choice.
+  - name: hit-the-streets
+    description: Hit the Streets to Get What You Need (their Circle)
+    category: circle
+    results:
+      complete_success: They’re available and have the stuff.
+      success_with_complications: |
+        Choose 1:
+        - whoever you’re going to is juggling their own problems
+        - whatever you need is more costly than anticipated
+      failure: A miss. The MC tells you what happens.
+  - name: study-a-place-of-power
+    description: Study a Sanctuary, Gathering Spot, or Place of Power (the Circle that controls it)
+    category: circle
+    results:
+      complete_success: You see below the surface to the reality underneath; the MC will reveal an area, NPC, or item located within that is not what it seems. Your insight reveals much about the Circle’s politics and schemes; ask the MC a question about the Circle and take +1 forward when acting on the answer.
+      success_with_complications: You see below the surface to the reality underneath; the MC will reveal an area, NPC, or item located within that is not what it seems.
+      failure: A miss. The MC tells you what happens.
+  - name: refuse-to-honor-a-debt
+    description: Refuse to Honor a Debt (difference in Status)
+    category: debt
+    results:
+      complete_success: You weasel out of the obligation for now, but you still owe the Debt.
+      success_with_complications: You weasel out of the obligation for now, but you still owe the Debt. You owe them an additional Debt or mark corruption, your choice.
+      failure: >
+        You can’t avoid the noose: either honor the Debt in full or erase all the Debts owed to you by their Circle and take a -1 ongoing to Status with their Circle until after time passes.
+
+  # - name:
+  #   description:
+  #   category: debt
+  #   results:
+  #     complete_success:
+  #     success_with_complications:
+  #     failure: A miss. The MC tells you what happens.
