@@ -72,13 +72,15 @@ We recommend [heroku](https://heroku.com), but you can deploy anywhere you like.
 
 ## Supported games and languages
 
-| Game                | Language  | Status/Content  | Discord bots
-| --                  | --        | --              | --
-| Apocalypse World    | en-US     | Basic moves     | [Add Apocalypse World Bot][apocalypse-world-bot]
-| Apocalypse World    | pt-BR     | Basic moves     | [Adicionar Bot do Apocalypse World em pt-BR][apocalypse-world-bot-ptbr]
+| Game                      | Language | Status/Content | Discord bots
+| --                        | --       | --             | --
+| Apocalypse World          | en-US    | Basic moves    | [Add Apocalypse World Bot][apocalypse-world-bot]
+| Apocalypse World          | pt-BR    | Basic moves    | [Adicionar Bot do Apocalypse World em pt-BR][apocalypse-world-bot-ptbr]
+| Urban Shadows 2nd edition | en-US    | Basic moves    | [Add Urban Shadows 2ed Bot][urban-shadows-2ed-bot]
 
 <!-- Links -->
 [heroku-deploy]: https://heroku.com/deploy?template=https://github.com/paulodiovani/interactive-pbta-bot
 [apocalypse-world-bot]: https://discord.com/api/oauth2/authorize?client_id=976286129517121586&permissions=2147483648&scope=bot%20applications.commands
 [apocalypse-world-bot-ptbr]: https://discord.com/api/oauth2/authorize?client_id=979104765797597244&permissions=2147483648&scope=bot%20applications.commands
+[urban-shadows-2ed-bot]: https://discord.com/api/oauth2/authorize?client_id=980873141591097344&permissions=2147483648&scope=bot%20applications.commands
 [collaborating-with-pull-requests]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests
