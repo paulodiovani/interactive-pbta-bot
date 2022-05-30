@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.1.2
+
+- Add Urban Shadows basic moves
+
 ## Version 1.1.0
 
 - Set embed color according to result
