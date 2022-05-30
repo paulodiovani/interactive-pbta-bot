@@ -181,6 +181,14 @@ moves:
       complete_success: You see below the surface to the reality underneath; the MC will reveal an area, NPC, or item located within that is not what it seems. Your insight reveals much about the Circle’s politics and schemes; ask the MC a question about the Circle and take +1 forward when acting on the answer.
       success_with_complications: You see below the surface to the reality underneath; the MC will reveal an area, NPC, or item located within that is not what it seems.
       failure: A miss. The MC tells you what happens.
+  - name: refuse-to-honor-a-debt
+    description: Refuse to Honor a Debt (difference in Status)
+    category: debt
+    results:
+      complete_success: You weasel out of the obligation for now, but you still owe the Debt.
+      success_with_complications: You weasel out of the obligation for now, but you still owe the Debt. You owe them an additional Debt or mark corruption, your choice.
+      failure: >
+        You can’t avoid the noose: either honor the Debt in full or erase all the Debts owed to you by their Circle and take a -1 ongoing to Status with their Circle until after time passes.
 
   # - name:
   #   description:
