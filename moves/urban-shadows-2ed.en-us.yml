@@ -60,18 +60,18 @@ moves:
     results:
       complete_success: |
         You inflict harm as established and your opposition chooses 1:
-        - they inflict harm on you
-        - they put you in a bad spot
-        - they create an opening to flee
+        • they inflict harm on you
+        • they put you in a bad spot
+        • they create an opening to flee
         You also choose one:
-        - you inflict terrible harm (+1)
-        - you take something from them
-        - you create an opportunity for an ally
+        • you inflict terrible harm (+1)
+        • you take something from them
+        • you create an opportunity for an ally
       success_with_complications: |
         You inflict harm as established and your opposition chooses 1:
-        - they inflict harm on you
-        - they put you in a bad spot
-        - they create an opening to flee
+        • they inflict harm on you
+        • they put you in a bad spot
+        • they create an opening to flee
       failure: A miss. The MC tells you what happens.
   - name: escape-a-situation
     description: Escape a Situation (Blood)
@@ -79,18 +79,18 @@ moves:
     results:
       complete_success: |
         You get away and choose 1:
-        - you suffer harm during your escape
-        - you end up in another dangerous situation
-        - you leave something important behind
-        - you owe an NPC a Debt for their aid
-        - you give into your base nature and mark corruption
+        • you suffer harm during your escape
+        • you end up in another dangerous situation
+        • you leave something important behind
+        • you owe an NPC a Debt for their aid
+        • you give into your base nature and mark corruption
       success_with_complications: |
         You get away and choose 1, the MC choose 1 as well:
-        - you suffer harm during your escape
-        - you end up in another dangerous situation
-        - you leave something important behind
-        - you owe an NPC a Debt for their aid
-        - you give into your base nature and mark corruption
+        • you suffer harm during your escape
+        • you end up in another dangerous situation
+        • you leave something important behind
+        • you owe an NPC a Debt for their aid
+        • you give into your base nature and mark corruption
       failure: A miss. The MC tells you what happens.
   - name: persuade-an-npc
     description: Persuade an NPC (Heart)
@@ -105,44 +105,44 @@ moves:
     results:
       complete_success: |
         Ask 2. If you’re in their Circle, ask an additional question:
-        - who’s pulling your character’s strings?
-        - what’s your character’s beef with █████?
-        - what’s your character hoping to get from █████?
-        - what does your character worry is going to happen?
-        - how could I get your character to █████?
-        - how could I put your character in my Debt?
+        • who’s pulling your character’s strings?
+        • what’s your character’s beef with █████?
+        • what’s your character hoping to get from █████?
+        • what does your character worry is going to happen?
+        • how could I get your character to █████?
+        • how could I put your character in my Debt?
       success_with_complications: |
         Ask 2, they ask 1 of you as well. If you’re in their Circle, ask an additional question:
-        - who’s pulling your character’s strings?
-        - what’s your character’s beef with █████?
-        - what’s your character hoping to get from █████?
-        - what does your character worry is going to happen?
-        - how could I get your character to █████?
-        - how could I put your character in my Debt?
+        • who’s pulling your character’s strings?
+        • what’s your character’s beef with █████?
+        • what’s your character hoping to get from █████?
+        • what does your character worry is going to happen?
+        • how could I get your character to █████?
+        • how could I put your character in my Debt?
       failure: |
         A miss. The MC tells you what happens. If you’re in their Circle, ask 1 anyway:
-        - who’s pulling your character’s strings?
-        - what’s your character’s beef with █████?
-        - what’s your character hoping to get from █████?
-        - what does your character worry is going to happen?
-        - how could I get your character to █████?
-        - how could I put your character in my Debt?
+        • who’s pulling your character’s strings?
+        • what’s your character’s beef with █████?
+        • what’s your character hoping to get from █████?
+        • what does your character worry is going to happen?
+        • how could I get your character to █████?
+        • how could I put your character in my Debt?
   - name: mislead-distract-or-trick
     description: Mislead, Distract or Trick (Mind)
     category: basic
     results:
       complete_success: |
         They are fooled, at least for a moment. Pick 3:
-        - you create an opportunity
-        - you expose a weakness or flaw
-        - you confuse them for some time
-        - you avoid further entanglement
+        • you create an opportunity
+        • you expose a weakness or flaw
+        • you confuse them for some time
+        • you avoid further entanglement
       success_with_complications: |
         They are fooled, at least for a moment. Pick 2:
-        - you create an opportunity
-        - you expose a weakness or flaw
-        - you confuse them for some time
-        - you avoid further entanglement
+        • you create an opportunity
+        • you expose a weakness or flaw
+        • you confuse them for some time
+        • you avoid further entanglement
       failure: A miss. The MC tells you what happens.
   - name: keep-your-cool
     description: Keep Your Cool (Spirit)
@@ -180,8 +180,8 @@ moves:
       complete_success: They’re available and have the stuff.
       success_with_complications: |
         Choose 1:
-        - whoever you’re going to is juggling their own problems
-        - whatever you need is more costly than anticipated
+        • whoever you’re going to is juggling their own problems
+        • whatever you need is more costly than anticipated
       failure: A miss. The MC tells you what happens.
   - name: study-a-place-of-power
     description: Study a Sanctuary, Gathering Spot, or Place of Power (the Circle that controls it)
@@ -220,27 +220,27 @@ moves:
     results:
       complete_success: |
         Ask 3; your contacts will answer to the best of their ability.
-        - What conflict is everyone talking about?
-        - What happened to █████?
-        - What has █████ been up to recently?
-        - Who is responsible for █████?
-        - Who has a Debt on █████?
+        • What conflict is everyone talking about?
+        • What happened to █████?
+        • What has █████ been up to recently?
+        • Who is responsible for █████?
+        • Who has a Debt on █████?
         Hold 2. Spend your hold — 1 for 1 — to take a 10+ instead of rolling when the information you gained would aid you on a move.
       success_with_complications: |
         Ask 3; your contacts will answer to the best of their ability.
-        - What conflict is everyone talking about?
-        - What happened to █████?
-        - What has █████ been up to recently?
-        - Who is responsible for █████?
-        - Who has a Debt on █████?
+        • What conflict is everyone talking about?
+        • What happened to █████?
+        • What has █████ been up to recently?
+        • Who is responsible for █████?
+        • Who has a Debt on █████?
         Hold 1. Spend your hold — 1 for 1 — to take a 10+ instead of rolling when the information you gained would aid you on a move.
       failure: |
         Ask 1; but one of your contacts has a few questions about your Circle’s politics as well. Answer them honestly, mark corruption, or owe them a Debt, your choice.
-        - What conflict is everyone talking about?
-        - What happened to █████?
-        - What has █████ been up to recently?
-        - Who is responsible for █████?
-        - Who has a Debt on █████?
+        • What conflict is everyone talking about?
+        • What happened to █████?
+        • What has █████ been up to recently?
+        • Who is responsible for █████?
+        • Who has a Debt on █████?
         Hold 1. Spend your hold — 1 for 1 — to take a 10+ instead of rolling when the information you gained would aid you on a move.
   - name: tend-to-your-business
     description: Tend to Your Business Instead of Meddling in City Affairs
@@ -263,14 +263,14 @@ moves:
     results:
       complete_success: |
         They pick 2:
-        - they secure new holdings; mark resources
-        - they seek new members; mark recruitment
-        - they demand secrecy; cover up another action
+        • they secure new holdings; mark resources
+        • they seek new members; mark recruitment
+        • they demand secrecy; cover up another action
       success_with_complications: |
         They pick 1:
-        - they secure new holdings; mark resources
-        - they seek new members; mark recruitment
-        - they demand secrecy; cover up another action
+        • they secure new holdings; mark resources
+        • they seek new members; mark recruitment
+        • they demand secrecy; cover up another action
       failure: Their efforts lead to internal strife; an authority is dethroned or humiliated, and a rebel coalition within the faction gains momentum—reduce the faction’s Strength.
   - name: track-someone-down
     description: Track a Status-1 or Status-2 Character Down Within the City, roll.
@@ -299,15 +299,15 @@ moves:
       complete_success: |
         They take hold of it; reduce the targeted faction’s appropriate attribute and seize a vulnerable asset.
         All three:
-        - they don’t sacrifice an important leader, ally, or asset
-        - they don’t suffer an immediate, retaliatory attack
-        - they don’t cause serious collateral damage
+        • they don’t sacrifice an important leader, ally, or asset
+        • they don’t suffer an immediate, retaliatory attack
+        • they don’t cause serious collateral damage
       success_with_complications: |
         They take hold of it; reduce the targeted faction’s appropriate attribute and seize a vulnerable asset.
         They choose one:
-        - they don’t sacrifice an important leader, ally, or asset
-        - they don’t suffer an immediate, retaliatory attack
-        - they don’t cause serious collateral damage
+        • they don’t sacrifice an important leader, ally, or asset
+        • they don’t suffer an immediate, retaliatory attack
+        • they don’t cause serious collateral damage
       failure: The strike instead results in the utter destruction of the thing the attacking faction attempted to seize; someone comes to one of the PCs looking for help obtaining justice or revenge.
   - name: search-the-city
     description: Searches the City for Useful Informaion (Size)
@@ -316,15 +316,15 @@ moves:
       complete_success: |
         They uncover some crucial details, enough to ask a PC or notable NPC to pursue it further.
         They also pick 1:
-        - they attract the attention of a rival faction
-        - they have to make an asset vulnerable
-        - they take -1 ongoing until the end of the next faction turn
+        • they attract the attention of a rival faction
+        • they have to make an asset vulnerable
+        • they take -1 ongoing until the end of the next faction turn
       success_with_complications: |
         They uncover some crucial details, enough to ask a PC or notable NPC to pursue it further.
         They also pick 2:
-        - they attract the attention of a rival faction
-        - they have to make an asset vulnerable
-        - they take -1 ongoing until the end of the next faction turn
+        • they attract the attention of a rival faction
+        • they have to make an asset vulnerable
+        • they take -1 ongoing until the end of the next faction turn
       failure: A member of the faction who has secured some vital information ends up dead... but not before passing off what they know to one of the PCs.
   - name: offer-passage
     description: Faction Offers Passage to Someone — Into or Out of the City (Size)
@@ -333,15 +333,18 @@ moves:
       complete_success: |
         The way is made clear, no matter who opposes it;
         choose 1:
-        - someone exits; they are beyond reach until they choose to return
-        - someone enters; the faction gains a powerful asset
+        • someone exits; they are beyond reach until they choose to return
+        • someone enters; the faction gains a powerful asset
       success_with_complications: |
         The way is made clear, no matter who opposes it;
         choose 1:
-        - someone exits; they are beyond reach until they choose to return
-        - someone enters; the faction gains a powerful asset
+        • someone exits; they are beyond reach until they choose to return
+        • someone enters; the faction gains a powerful asset
         The passage offends a Status-3 NPC who seeks tribute for the trespass; the faction must perform a favor — dedicating a faction move next faction turn — sacrifice an asset, or risk open war.
       failure: The passage sparks a conflict between the faction and their own allies before it can be completed; someone comes to one of the PCs seeking help to negotiate a truce.
+  # Archetype moves
+  # Aware
+
 
   # - name:
   #   description:
