@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.1.3
+
+- Add Urban Shadows Circle, Debt, City and Faction moves
+
 ## Version 1.1.2
 
 - Add Urban Shadows basic moves
