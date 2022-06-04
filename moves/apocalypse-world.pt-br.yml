@@ -19,10 +19,29 @@ commands:
   - name: movimento
     description: Executa um movimento
 categories:
+  - name: generico
+    command: movimento
+    description: Movimentos genéricos
   - name: basico
     command: movimento
     description: Movimentos básicos
 moves:
+  # Generic moves (just roll the dice)
+  - name: rolar
+    description: Rolar os dados
+    category: generico
+    results:
+      complete_success: Sucesso maior.
+      partial_success: Sucesso menor.
+      failure: Prepare-se para o pior.
+  - name: fazer-um-movimento
+    description: Faça um movimento.
+    category: generico
+    results:
+      complete_success: Sucesso maior.
+      partial_success: Sucesso menor.
+      failure: Prepare-se para o pior.
+  # Basic moves
   - name: agir-sob-pressao
     description: Agir Sob Pressão
     category: basico

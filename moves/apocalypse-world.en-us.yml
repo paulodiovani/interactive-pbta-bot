@@ -19,10 +19,29 @@ commands:
   - name: move
     description: Performs a move
 categories:
+  - name: generic
+    command: move
+    description: Generic Moves
   - name: basic
     command: move
     description: Basic movements
 moves:
+  # Generic moves (just roll the dice)
+  - name: roll
+    description: Roll the Dice
+    category: generic
+    results:
+      complete_success: Major success.
+      partial_success: Minor success.
+      failure: Be prepared for the worst.
+  - name: make-a-move
+    description: Make a Move
+    category: generic
+    results:
+      complete_success: Major success.
+      partial_success: Minor success.
+      failure: Be prepared for the worst.
+  # Basic moves
   - name: do-something-under-fire
     description: Do Something Under Fire
     category: basic
