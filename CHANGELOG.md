@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 2.0.1
+
+- Add more Urban Shadows moves
+
 ## Version 2.0.0
 
 - (breaking change) Rename `success_with_complications` key
