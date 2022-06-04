@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 2.0.0
+
+- (breaking change) Rename `success_with_complications` key
+  in YAML to `partial_success`.
+- Add generic moves to Apocalypse World
+
 ## Version 1.1.3
 
 - Add Urban Shadows Circle, Debt, City and Faction moves
