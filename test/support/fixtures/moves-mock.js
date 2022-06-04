@@ -41,7 +41,7 @@ const movesMock = {
       category: 'sample-category',
       results: {
         complete_success: 'sample-success',
-        success_with_complications: 'sample-succes-with-complication',
+        partial_success: 'sample-succes-with-complication',
         failure: 'sample-failure',
       },
     },
