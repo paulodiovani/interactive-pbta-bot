@@ -1,6 +1,6 @@
 {
   "name": "interactive-pbta-bot",
-  "version": "1.1.1",
+  "version": "1.1.3",
   "description": "An Interactive Discord Bot for pbta games, using slash commands to trigger moves.",
   "main": "index.js",
   "type": "module",
