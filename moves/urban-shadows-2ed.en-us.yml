@@ -18,6 +18,9 @@ application:
 commands:
   - name: move
     description: Performs a move
+  - name: move-from-archetype
+    description: Performs a move from a player character archetype
+# category list
 categories:
   - name: generic
     command: move
@@ -37,6 +40,43 @@ categories:
   - name: faction
     command: move
     description: Faction Moves
+  # Archetypes categories
+  - name: aware
+    command: move-from-archetype
+    description: The Aware Moves
+  - name: fae
+    command: move-from-archetype
+    description: The Fae Moves
+  - name: hunter
+    command: move-from-archetype
+    description: The Hunter Moves
+  - name: imp
+    command: move-from-archetype
+    description: The Imp Moves
+  - name: oracle
+    command: move-from-archetype
+    description: The Oracle Moves
+  - name: spectre
+    command: move-from-archetype
+    description: The Spectre Moves
+  - name: sworn
+    command: move-from-archetype
+    description: The Sworn Moves
+  - name: tainted
+    command: move-from-archetype
+    description: The Tainted Moves
+  - name: vamp
+    command: move-from-archetype
+    description: The Vamp Moves
+  - name: veteran
+    command: move-from-archetype
+    description: The Veteran Moves
+  - name: wizard
+    command: move-from-archetype
+    description: The Wizard Moves
+  - name: wolf
+    command: move-from-archetype
+    description: The Wolf Moves
 moves:
   # Generic moves (just roll the dice)
   - name: roll
@@ -343,13 +383,184 @@ moves:
         The passage offends a Status-3 NPC who seeks tribute for the trespass; the faction must perform a favor — dedicating a faction move next faction turn — sacrifice an asset, or risk open war.
       failure: The passage sparks a conflict between the faction and their own allies before it can be completed; someone comes to one of the PCs seeking help to negotiate a truce.
   # Archetype moves
-  # Aware
-
+  # The Aware
+  - name: i-know-a-guy
+    description: Hit the Streets to Get What you Need From a Member of Your Circle (Heart)
+    category: aware
+    results:
+      complete_success: They’re available and have the stuff.
+      partial_success: |
+        Choose 1:
+        • whoever you’re going to is juggling their own problems
+        • whatever you need is more costly than anticipated
+        • however you find them requires you to offer a Debt to an intermediary
+      failure: A miss. The MC tells you what happens.
+  - name: one-way-or-another
+    description: Ask a Member of Your Circle for Help With a Time Sensitive Situation (Heart)
+    category: aware
+    results:
+      complete_success: They can either agree to lend you aid or owe you a Debt, their choice. Their guilt is palpable if they choose to decline; take the Debt and a +1 ongoing against them as long as you hold that Debt.
+      partial_success: They can either agree to lend you aid or owe you a Debt, their choice.
+      failure: You’ve asked far too much; their help costs you a Debt if they offer it and you take a -1 ongoing to **refusing to honor a Debt** to members of your Circle until time passes.
+  - name: tend-to-your-relationships
+    description: Tend to Your Mortal Relationships During Faction Turn (Heart)
+    category: aware
+    results:
+      complete_success: One of the mortals closest to you offers you a way to deepen your bond; clear a corruption advance if you agree to what they propose.
+      partial_success: One of the mortals closest to you offers you a way to deepen your bond; clear a corruption advance if you agree to what they propose. Agreeing isn’t so simple; what they ask of you threatens to expose them to the part of your life you’ve kept hidden.
+      failure: Your attempts to patch things up come too late; one of your mortal relationships finally cuts ties with you in a painful and public way.
+  - name: yout-kit
+    description: Go to Your Kit for Some Mundane Gear
+    category: aware
+    results:
+      complete_success: You find something you can use that pretty much fits the bill. It’s perfect; take a +1 ongoing to putting it to use in the scene.
+      partial_success: You find something you can use that pretty much fits the bill.
+      failure: The situation escalates while you’re trying to prepare—brace yourself!
+  # The Far
+  - name: in-our-blood
+    description: Mislead, distract, or Trick Someone Through Lies of Omission or Clever Misdirection (Heart)
+    category: fae
+    results:
+      complete_success: |
+        They are fooled, at least for a moment. Pick 3:
+        • you create an opportunity
+        • you expose a weakness or flaw
+        • you confuse them for some time
+        • you avoid further entanglement
+      partial_success: |
+        They are fooled, at least for a moment. Pick 2:
+        • you create an opportunity
+        • you expose a weakness or flaw
+        • you confuse them for some time
+        • you avoid further entanglement
+      failure: A miss. The MC tells you what happens.
+  - name: draw-back-the-curtain
+    description: Escape a Situation (Blood)
+    category: fae
+    results:
+      complete_success: |
+        You get away and choose 1:
+        • you suffer harm during your escape
+        • you end up in another dangerous situation
+        • you leave something important behind
+        • you owe an NPC a Debt for their aid
+        • you give into your base nature and mark corruption
+        • you escape to your homeland, for better or worse
+      partial_success: |
+        You get away and choose 1, the MC choose 1 as well:
+        • you suffer harm during your escape
+        • you end up in another dangerous situation
+        • you leave something important behind
+        • you owe an NPC a Debt for their aid
+        • you give into your base nature and mark corruption
+        • you escape to your homeland, for better or worse
+      failure: A miss. The MC tells you what happens.
+  # The Hunter
+  # The Imp
+  # The Oracle
+  - name: psychometry
+    description: Examine an Interesting Object (Spirit)
+    category: oracle
+    results:
+      complete_success: |
+        Ask the MC questions from the list below.
+        Ask 3:
+        • what is the history of this object
+        • what secrets or mysteries has this object been privy to?
+        • what bans, wards, or limits are attached to this object?
+        • what strong emotions have most recently been near this object?
+        • where does this object belong?
+      partial_success: |
+        Ask the MC questions from the list below.
+        Ask 1:
+        • what is the history of this object
+        • what secrets or mysteries has this object been privy to?
+        • what bans, wards, or limits are attached to this object?
+        • what strong emotions have most recently been near this object?
+        • where does this object belong?
+      failure: The emotion of the object overwhelms you, take -1 ongoing for the scene.
+  - name: skim-the-surface
+    description: You Touch Someone and Attempt to Read Their Surface Thoughts (Spirit)
+    category: oracle
+    results:
+      complete_success: |
+        Ask their player questions from the list below.
+        Ask 3:
+        • what are you thinking about right now?
+        • what secrets are you currently keeping?
+        • who or what are you protecting?
+        • what is your hidden pain?
+      partial_success: |
+        Ask their player questions from the list below.
+        Ask 1:
+        • what are you thinking about right now?
+        • what secrets are you currently keeping?
+        • who or what are you protecting?
+        • what is your hidden pain?
+      failure: You inflict 1-harm (ap) on them and yourself.
+  - name: soothsayer
+    description: Turn to Your Prophetic Tools to Read Someone’s Future (Spirit)
+    category: oracle
+    results:
+      complete_success: The MC will tell you something new and interesting about their destiny. You may ask a followup question; the MC will answer honestly.
+      partial_success: The MC will tell you something new and interesting about their destiny.
+      failure: You see vague shapes of what is to come, but something is obscuring your prophetic powers; the future you tried to read is beyond your sight until you resolve the interference.
+  - name: foretellings
+    description: Before Each Faction Turn — or at the Start of the Game (Spirit)
+    category: oracle
+    results:
+      complete_success: |
+        **Pick one of the options below;**
+        after the Faction Turn the MC will tell you what your prophetic tools have revealed.
+        • fate has provided an opportunity to fulfill your role for your benefactor; the MC will tell you how to seize it
+        • an ally has come to own an item that might reveal more about your prophecy; the MC will tell you where they keep it
+        • a tragedy has made it possible for you to escape or alter your prophesized path; the MC will tell you what you must do
+      partial_success: |
+        **Pick one of the options below;**
+        after the Faction Turn the MC will tell you what your prophetic tools have revealed.
+        • fate has provided an opportunity to fulfill your role for your benefactor; the MC will tell you how to seize it
+        • an ally has come to own an item that might reveal more about your prophecy; the MC will tell you where they keep it
+        • a tragedy has made it possible for you to escape or alter your prophesized path; the MC will tell you what you must do
+        **You must also Choose one:**
+        • a threat is closing in; the MC will tell you why it stalks your or your benefactor
+        • an ally is plotting a betrayal; the MC will tell you when the hammer will fall
+        • a death lurks in the shadows; the MC will tell you how you can avoid it
+      failure: You instead receive a terrifying premonition about the prophecy that binds you to your benefactor; take -1 ongoing to efforts you make to stop it from coming to pass.
+  # The Spectre
+  # The Sworn
+  # The Tainted
+  # The Vamp
+  # The Veteran
+  # The Wizard
+  - name: channeling
+    description: Channel and Collect Your Magics (Spirit)
+    category: wizard
+    results:
+      complete_success: |
+        Hold 3.
+        Your hold lasts until you spend it or the scene ends. You can spend it to cast any spell you have as per the spell’s details.
+      partial_success: |
+        Hold 3 and choose 1 from the list below:
+        • Take -1 ongoing until you rest
+        • Suffer 1-harm (ap)
+        • Mark corruption
+        Your hold lasts until you spend it or the scene ends. You can spend it to cast any spell you have as per the spell’s details.
+      failure: |
+        Hold 1, but you cannot channel again this scene.
+        Your hold lasts until you spend it or the scene ends. You can spend it to cast any spell you have as per the spell’s details.
+  - name: sanctum-santorum
+    description: Go to Your Sanctum for a Spell Ingredient, Relic, or Tome (Spirit)
+    category: wizard
+    results:
+      complete_success: You’ve got pretty much just the thing.
+      partial_success: You’ve got something close, but it’s flawed or lacking in some significant way.
+      failure: You don’t have what you’re looking for, but you know someone from another Circle who probably has it in stock.
+  # The Wolf
 
   # - name:
   #   description:
-  #   category: faction
+  #   category: wizard
   #   results:
   #     complete_success:
   #     partial_success:
-  #     failure: A miss. The MC tells you what happens.
+  #     failure:
