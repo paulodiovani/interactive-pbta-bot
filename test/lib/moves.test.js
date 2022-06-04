@@ -64,7 +64,7 @@ describe('lib/moves.js', () => {
 
             expect(move.results)
               .to.be.an('object')
-              .that.include.all.keys('complete_success', 'success_with_complications', 'failure')
+              .that.include.all.keys('complete_success', 'partial_success', 'failure')
           }
         } catch (e) {
           throw new Error(`${e.message} in ${path.basename(movesFile)}`)

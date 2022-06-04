@@ -19,16 +19,35 @@ commands:
   - name: move
     description: Performs a move
 categories:
+  - name: generic
+    command: move
+    description: Generic Moves
   - name: basic
     command: move
     description: Basic movements
 moves:
+  # Generic moves (just roll the dice)
+  - name: roll
+    description: Roll the Dice
+    category: generic
+    results:
+      complete_success: Major success.
+      partial_success: Minor success.
+      failure: Be prepared for the worst.
+  - name: make-a-move
+    description: Make a Move
+    category: generic
+    results:
+      complete_success: Major success.
+      partial_success: Minor success.
+      failure: Be prepared for the worst.
+  # Basic moves
   - name: do-something-under-fire
     description: Do Something Under Fire
     category: basic
     results:
       complete_success: You do it.
-      success_with_complications: |
+      partial_success: |
         You flinch, hesitate, or stall: the MC can offer you a worse outcome, a hard bargain, or an ugly choice.
       failure: Be prepared for the worst.
   - name: attack-someone
@@ -37,7 +56,7 @@ moves:
     results:
       complete_success: |
         Inflict full harm as established.
-      success_with_complications: |
+      partial_success: |
         They're able somehow to dodge, block, or duck, or else you just don't quite strike home; inflict little harm.
         In either case, if they can and do choose to fight back, now you’re doing battle with them.
       failure: Be prepared for the worst.
@@ -46,7 +65,7 @@ moves:
     category: basic
     results:
       complete_success: You succeed.
-      success_with_complications: You succeed at a cost.
+      partial_success: You succeed at a cost.
       failure: Be prepared for the worst.
   - name: go-aggro-on-someone
     description: Go Aggro on Someone
@@ -54,7 +73,7 @@ moves:
     results:
       complete_success: |
         They have to choose: force your hand, or cave and do what you want. If they force your hand, you can do what you threatened, including inflicting harm as established.
-      success_with_complications: |
+      partial_success: |
         They can choose to force your hand or to cave, but they can also choose instead to fight back or make a break for it, and now you’re doing battle with them. If they force your hand, you can do what you threatened, including inflicting harm as established.
       failure: Be prepared for the worst.
   - name: seduce-or-manipulate
@@ -67,7 +86,7 @@ moves:
         For PCs: Choose both.
           - if they do it, they mark experience
           - if they refuse, erase one of their stat highlights for the remainder of the session
-      success_with_complications: |
+      partial_success: |
         For NPCs: They ask you to promise something first, and do it if you promise.
           They need some concrete assurance right now.
         For PCs: Choose 1:
@@ -79,7 +98,7 @@ moves:
     category: basic
     results:
       complete_success: They take +2 (help) or -2 (interfere) on their roll.
-      success_with_complications: They take +1 (help) or -1 (interfere) on their roll.
+      partial_success: They take +1 (help) or -1 (interfere) on their roll.
       failure: Be prepared for the worst.
   - name: read-a-sitch
     description: Read a Sitch
@@ -94,7 +113,7 @@ moves:
           - what should I be on the lookout for?
           - what's my enemy's true position?
           - who's in control here?
-      success_with_complications: |
+      partial_success: |
         Whenever you act on one of the MC's answers, take a +1.
         Ask 1:
           - where's my best escape route / way in / way past?
@@ -123,7 +142,7 @@ moves:
           - what does your character intend to do?
           - what does your character wish I'd do?
           - how could I get your character to __?
-      success_with_complications: |
+      partial_success: |
         Hold 1.
         While you're interacting with them, spend your hold to ask their player questions, 1 for 1:
           - is your character telling the truth?
@@ -139,7 +158,7 @@ moves:
       complete_success: |
         The MC will tell you something new and interesting about the current situation, and might ask you a question or two; answer them.
         MC will give you good detail.
-      success_with_complications: |
+      partial_success: |
         The MC will tell you something new and interesting about the current situation, and might ask you a question or two; answer them.
         MC will give you an impression. If you already know all there is to know, the MC will tell you that.
       failure: Be prepared for the worst.

@@ -19,16 +19,35 @@ commands:
   - name: movimento
     description: Executa um movimento
 categories:
+  - name: generico
+    command: movimento
+    description: Movimentos genéricos
   - name: basico
     command: movimento
     description: Movimentos básicos
 moves:
+  # Generic moves (just roll the dice)
+  - name: rolar
+    description: Rolar os dados
+    category: generico
+    results:
+      complete_success: Sucesso maior.
+      partial_success: Sucesso menor.
+      failure: Prepare-se para o pior.
+  - name: fazer-um-movimento
+    description: Faça um movimento.
+    category: generico
+    results:
+      complete_success: Sucesso maior.
+      partial_success: Sucesso menor.
+      failure: Prepare-se para o pior.
+  # Basic moves
   - name: agir-sob-pressao
     description: Agir Sob Pressão
     category: basico
     results:
       complete_success: Você consegue.
-      success_with_complications: |
+      partial_success: |
         Você vacila, hesita ou enrola: o MC pode te oferecer um resultado pior, uma barganha difícil ou uma escolha terrível.
       failure: Prepare-se para o pior.
   - name: pegar-de-surpresa
@@ -37,7 +56,7 @@ moves:
     results:
       complete_success: |
         Você simplesmente inflige ferimentos de acordo com a situação.
-      success_with_complications: |
+      partial_success: |
         A pessoa consegue evitar ou bloquear o ataque de alguma forma ou você simplesmente não acertou como planejado; causa menos dano.
         De qualquer forma, se a pessoa pode ou decide revidar, agora você está batalhando com ela.
       failure: Prepare-se para o pior.
@@ -46,7 +65,7 @@ moves:
     category: basico
     results:
       complete_success: Você tem sucesso.
-      success_with_complications: Você tem sucesso a um custo.
+      partial_success: Você tem sucesso a um custo.
       failure: Prepare-se para o pior.
   - name: partir-para-cima
     description: Partir para Cima
@@ -56,7 +75,7 @@ moves:
         A pessoa tem que escolher 1:
           - Pagar pra ver e aguentar as consequências.
           - Ceder e fazer o que você quiser.
-      success_with_complications: |
+      partial_success: |
         A pessoa tem que escolher 1:
           - Pagar pra ver e aguentar as consequências.
           - Ceder e fazer o que você quiser.
@@ -74,7 +93,7 @@ moves:
         No caso de PJs: ambos:
          - Se o alvo seguir suas palavras, ele marca experiência.
          - Se ele se negar, apague o destaque de um de seus atributos até o final da sessão.
-      success_with_complications: |
+      partial_success: |
         No caso de PNJs: o alvo vai seguir suas palavras, mas só se você conseguir dar a ele alguma garantia, corroboração ou provas antes.
         No caso de PJs: escolha 1:
          - Se o alvo seguir suas palavras, ele marca experiência.
@@ -85,7 +104,7 @@ moves:
     category: basico
     results:
       complete_success: A pessoa recebe +2 (ajuda) ou -2 (interferência) em sua rolagem.
-      success_with_complications: A pessoa recebe +1 (ajuda) ou -1 (interferência) em sua rolagem.
+      partial_success: A pessoa recebe +1 (ajuda) ou -1 (interferência) em sua rolagem.
       failure: Prepare-se para o pior.
   - name: sacar-uma-situacao
     description: Sacar uma situação
@@ -100,7 +119,7 @@ moves:
          - Com o que deveria me preocupar mais?
          - Qual é a localização exata do meu adversário?
          - Quem está no controle aqui?
-      success_with_complications: |
+      partial_success: |
         Sempre que agir de acordo com as respostas, receba +1.
         Faça 1 pergunta:
          - Onde fica a melhor rota de fuga / jeito de entrar / jeito de passar?
@@ -129,7 +148,7 @@ moves:
          - O que sua personagem pretende fazer?
          - O que sua personagem deseja que eu faça?
          - Como conseguiria convencer sua personagem a ___?
-      success_with_complications: |
+      partial_success: |
         Domínio 1.
         Enquanto estiver interagindo com aquela personagem, você pode gastar seu domínio para fazer perguntas ao seu jogador, na razão de 1 para 1:
         - Sua personagem está falando a verdade?
@@ -145,7 +164,7 @@ moves:
       complete_success: |
         O MC vai lhe dizer algo novo e interessante a respeito da situação atual e talvez lhe faça uma pergunta ou duas. Responda-as.
         O MC vai lhe dar muitos detalhes.
-      success_with_complications: |
+      partial_success: |
         O MC vai lhe dizer algo novo e interessante a respeito da situação atual e talvez lhe faça uma pergunta ou duas. Responda-as.
         O MC vai lhe dar apenas algumas impressões. Se você já sabe tudo o que há para saber, o MC vai lhe afirmar isso.
       failure: Prepare-se para o pior.
